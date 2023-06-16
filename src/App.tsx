@@ -1,18 +1,10 @@
 import { useState } from "react";
 import { NewTodoForm } from "./components/main-form";
-import "./styles.css";
 import { TodoList } from "./components/todo-list";
-
-type MYTodo = {
-  id: number;
-  title: string;
-  completed: boolean;
-};
-
-type MyTodos = MYTodo[];
+import { Todo, Todos } from "./components/shared/types";
 
 export default function App() {
-  const [todos, setTodos] = useState<MyTodos>([]);
+  const [todos, setTodos] = useState<Todos>([]);
 
   function addTodo(title: string) {
     setTodos((prevTodos) => [

@@ -1,13 +1,9 @@
 import { TodoItem } from "../todo-item"
+import { Todos, Todo } from "../shared/types";
 
-type Todo = {
-  id: number;
-  title: string;
-  completed: boolean;
-};
 
 type Props = {
-  todos: Todo[];
+  todos: Todos;
   toggleTodo: (id: number, completed: boolean) => void;
   deleteTodo: (id: number) => void;
 };
